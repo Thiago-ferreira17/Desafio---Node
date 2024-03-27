@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors'); // Importe o pacote cors
+const cors = require('cors'); 
 
 const uuid = require('uuid');
 
@@ -8,7 +8,7 @@ const port = 3000;
 const app = express();
 app.use(express.json());
 
-// Adicione o middleware cors ao seu aplicativo Express
+
 app.use(cors());
 
 const orders = [];
