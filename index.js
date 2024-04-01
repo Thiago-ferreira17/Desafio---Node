@@ -3,7 +3,7 @@ const cors = require('cors');
 
 const uuid = require('uuid');
 
-const port = 3000;
+const port = 3001;
 
 const app = express();
 app.use(express.json());
@@ -25,7 +25,7 @@ const checkUserId = (request, response, next) => {
 }
 
 const requestType = (request, response, next) => {
-    console.log(Method: ${request.method}, URL: http://localhost:3000${request.url});
+    console.log(`Method: ${request.method}, URL: http://localhost:3000${request.url}`);
     next();
 }
 
@@ -76,5 +76,5 @@ app.patch('/order/:id', requestType, (request, response) => {
 })
 
 app.listen(port, () => {
-    console.log(🚀 Servidor iniciado na porta ${port});
+    console.log(`🚀 Servidor iniciado na porta ${port}`);
 })
